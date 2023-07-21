@@ -1,22 +1,29 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import Menu from "./Menu";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+
+      const threshold = 100;
+      setIsSticky(offset <= threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className="flex flex-col">
-      <div className="flex justify-center font-mono uppercase text-sm bg-black text-white border-b-4 border-b-slate-900 text-center">
-        <div className="flex flex-row">
-          <div>score up to 60% off</div>
-          <div className="flex justify-center">
-          <svg fill="currentColor" viewBox="0 0 16 16" height={20}>
-            <path
-              fillRule="evenodd"
-              d="M8 4a.5.5 0 01.5.5v5.793l2.146-2.147a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L7.5 10.293V4.5A.5.5 0 018 4z"
-            />
-          </svg>
-          </div>
-        </div>
-      </div>
+    <header>
+      <Menu />
+      <div className="flex justify-center font-mono uppercase text-sm bg-black text-white border-b-4 border-b-slate-900 text-center"></div>
       <ul className="flex justify-end font-mono text-xs mt-2 gap-5">
         <li>
           <Link href="/1">help</Link>
@@ -39,6 +46,12 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <div className="flex justify-between ml-5 mr-5">
+        <p>LOGO</p>
+        <p>Navbar2</p>
+        <p>SEARCHBAR</p>
+        <p>ICONS</p>
+      </div>
     </header>
   );
 };

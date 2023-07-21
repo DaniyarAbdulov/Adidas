@@ -1,5 +1,30 @@
 import Image from "next/image";
 
 export default function Home() {
-  return 
+  return (
+    <div>
+      HOME
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+
+    </div>
+  );
 }
