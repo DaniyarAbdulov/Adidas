@@ -9,7 +9,7 @@ const Menu = () => {
   };
 
   return (
-    <div className=" flex justify-center bg-gray-950">
+    <div className="flex justify-center bg-gray-950 h-9">
       <button onClick={toggleMenu} className="">
         <div className="flex  text-white">
           <div>score up to 60% off</div>
@@ -48,7 +48,7 @@ const Menu = () => {
                 </div>
                 <div>
                   <div>
-                    <button className="border-b-4 border-r-4 flex uppercase text-white text-sm bg-black py-3 px-2.5">
+                    <button className="border-b-4 border-r-4 flex uppercase text-white text-sm bg-black py-3 px-2.5 mt-5">
                       shop now{" "}
                       <svg
                         className="w-5 h-5 ml-5"
@@ -97,7 +97,7 @@ const Menu = () => {
                   Shipping at checkout.
                 </div>
                 <div>
-                  <button className="border-b-4 border-r-4 flex uppercase text-white text-sm bg-black py-3 px-2.5">
+                  <button className="border-b-4 border-r-4 flex uppercase text-white text-sm bg-black py-3 px-2.5 mt-5">
                     join adiclub for free{" "}
                     <svg
                       className="w-5 h-5 ml-5"
