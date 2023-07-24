@@ -2,8 +2,12 @@
 import Link from "next/link";
 import Menu from "./Menu";
 import { useState, useEffect } from "react";
+interface Props {
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-const Navbar = () => {
+
+const Navbar = ({setIsMenuOpen}: Props) => {
   const [isSticky, setIsSticky] = useState(true);
 
   useEffect(() => {
@@ -21,9 +25,9 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <header>
-      <Menu />
-      <div className="flex justify-center font-mono uppercase text-sm bg-black text-white border-b-4 border-b-slate-900 text-center w-full h-auto"></div>
+    <header className="w-full h-full">
+      <Menu setIsMenuOpen={setIsMenuOpen}/>
+      <div className="flex flex-row justify-center font-mono uppercase text-sm bg-black text-white border-b-4 border-b-slate-900 text-center w-full h-auto"></div>
       <ul className="flex justify-end font-mono text-xs mt-2 gap-5">
         <li>
           <Link href="/1">help</Link>

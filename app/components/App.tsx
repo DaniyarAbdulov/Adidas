@@ -1,33 +1,21 @@
-"use client";
-import React, { useState } from "react";
+'use client'
+import React from 'react'
+import Navbar from './Navbar';
 
 interface Props {
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+    children: any
 }
 
-const Menu = ({setIsMenuOpen}: Props) => {
+const App = ({children}: Props) => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const toggleMenu = () => {
+  function toggleMenu() {
     setIsMenuOpen(prev => !prev);
-  };
-
+  }
   return (
-    <div className="flex justify-center bg-gray-950 h-9 abs">
-      <button onClick={toggleMenu} className="">
-        <div className="flex  text-white">
-          <div>score up to 60% off</div>
-          <div className="flex justify-center">
-            <svg fill="currentColor" viewBox="0 0 16 16" height={20}>
-              <path
-                fillRule="evenodd"
-                d="M8 4a.5.5 0 01.5.5v5.793l2.146-2.147a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L7.5 10.293V4.5A.5.5 0 018 4z"
-              />
-            </svg>
-          </div>
-        </div>
-      </button>
-      {/* {isMenuOpen && (
-        <div className="absolute w-full h-full bg-black bg-opacity-50 flex items-start justify-center">
+    <div className='relative'>        
+    {isMenuOpen && (
+        <div className="z-10 absolute w-full h-full bg-black bg-opacity-50 flex items-start justify-center">
           <div className="  bg-white w-full transition-transform ease-in-out duration-300 p-10">
             <div className=" flex justify-end">
               <button onClick={toggleMenu} className=" bg-white text-black">
@@ -123,9 +111,12 @@ const Menu = ({setIsMenuOpen}: Props) => {
             </div>
           </div>
         </div>
-      )} */}
+      )}
+        <Navbar setIsMenuOpen={setIsMenuOpen}/>
+        {children}
+        
     </div>
-  );
-};
+  )
+}
 
-export default Menu;
+export default App
