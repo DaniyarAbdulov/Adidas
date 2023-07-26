@@ -336,11 +336,15 @@ export default function Home() {
         <div className="flex box-border">
           <div className="flex flex-col">
             <div className="relative">
+              <div className="flex">
               <img
                 className="w-full h-full"
                 src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/miami-messi-jersey-mh-lg-mw-july21-d_tcm221-1045758.jpg"
                 alt="Adidas Miami Messi Jersey"
               />
+              
+              </div>
+              
             </div>
             <div className="absolute flex flex-col left-5">
               <span className="font-sans text-4xl font-bold uppercase text-white">
@@ -684,6 +688,46 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="box-border mt-40 ml-5 mr-5">
+        <h1 className="uppercase text-xl font-bold">
+          more from adidas stories
+        </h1>
+        <div className="flex justify-between box-border gap-10 mt-5">
+          <div className="flex flex-col box-border">
+            <img className="w-full h-full"
+            src="https://brand.assets.adidas.com/f_auto,q_auto,fl_lossy/capi/enUS/Images/what-are-soccer-penalty-kicks-blog-thumbnail-d_221-952992.jpg"/>
+            <p className=" flex flex-col">
+              <span className="box-border bg-slate-300 uppercase font-bold">What Is A Penalty Kick In Soccer</span>
+              <span className="box-border font-light">Are you curious about what a penalty kick is, when it happens  and what the rules are? Read about what they are and when  they happen with adi...</span>
+            </p>
+          </div>
+          <div className="flex flex-col box-border ">
+            <img className="w-full h-full"
+            src="https://brand.assets.adidas.com/f_auto,q_auto,fl_lossy/capi/enUS/Images/soccer-offside-rules-blog-thumbnail-d_221-953959.jpg"/>
+            <p className=" flex flex-col">
+              <span className="box-border bg-slate-300 uppercase font-bold">Offsides In Soccer: Explained</span>
+              <span className="box-border font-light">Watching a match? Get the scoop on the rules of the game, starting with the offside soccer rule, explained by adidas.</span>
+            </p>
+          </div>
+          <div className="flex flex-col box-border ">
+            <img className=" w-full h-full"
+            src="https://brand.assets.adidas.com/f_auto,q_auto,fl_lossy/capi/enUS/Images/history-of-the-adidas-logo-blog-thumbnail-d_221-932543.jpg"/>
+            <p className=" flex flex-col">
+              <span className="box-border bg-slate-300 uppercase font-bold">adidas Logos: History and Meaning</span>
+              <span className="box-border font-light">Ever wondered how the adidas logos came to be? Discover the history of adidas logos and the purpose behind each design evolution, from 1949 ...</span>
+            </p>
+          </div>
+          <div className="flex flex-col box-border ">
+            <img className="w-full h-full"
+            src="https://brand.assets.adidas.com/f_auto,q_auto,fl_lossy/capi/enUS/Images/what-shoes-to-wear-to-the-gym-thumbnail-d_221-927751.jpg"/>
+            <p className=" flex flex-col ">
+              <span className="box-border bg-slate-300 uppercase font-bold text-base">What Shoes Should You Wear to the Gym</span>
+              <span className="box-border font-light">Get the right support for your training session. Find out the best workout shoes for the gym with adidas’ top picks and advice.</span>
+            </p>
+          </div>
+          
         </div>
       </div>
     </div>
