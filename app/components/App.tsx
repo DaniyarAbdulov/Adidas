@@ -2,6 +2,10 @@
 import React from 'react'
 import Navbar from './Navbar';
 
+
+
+
+
 interface Props {
     children: any
 }
@@ -13,7 +17,9 @@ const App = ({children}: Props) => {
     setIsMenuOpen(prev => !prev);
   }
   return (
-    <div className='relative'>        
+    
+    <div className='relative'>
+        
     {isMenuOpen && (
         <div className="z-10 absolute w-full h-full bg-black bg-opacity-50 flex items-start justify-center">
           <div className="  bg-white w-full transition-transform ease-in-out duration-300 p-10">
@@ -113,8 +119,8 @@ const App = ({children}: Props) => {
         </div>
       )}
         <Navbar setIsMenuOpen={setIsMenuOpen}/>
-        {children}
         
+        {children}
     </div>
   )
 }

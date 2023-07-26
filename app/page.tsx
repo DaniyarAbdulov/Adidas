@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   const [view, setView] = useState<number>(0);
@@ -331,185 +332,193 @@ export default function Home() {
   }
   return (
     <div className="flex flex-col">
-      {/* <div className="">
-        <div className="relative">
-          <img
-            className="w-full h-full"
-            src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/miami-messi-jersey-mh-lg-mw-july21-d_tcm221-1045758.jpg"
-            alt="Adidas Miami Messi Jersey"
-          />
-          <div className="absolute top-60 ml-5">
-            <h1 className="top-60 font-sans text-4xl font-bold uppercase text-white">
-              the future is soccer
-            </h1>
-            <h2 className=" text-white font-sans font-light">
-              Pre-order Lionel Messi’s new Inter Miami CF authentic jersey.
-              <br />
-              Available exclusively in the adidas app.
-            </h2>
-            <button className="border-b-4 border-r-4 flex uppercase text-black text-sm bg-white py-3.5 px-2.5 mt-5">
-              shop now{" "}
-              <svg
-                className="w-5 h-5 ml-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </button>
+      <div className="relative flex flex-col justify-stretchbox-border">
+        <div className="flex box-border">
+          <div className="flex flex-col">
+            <div className="relative">
+              <img
+                className="w-full h-full"
+                src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/miami-messi-jersey-mh-lg-mw-july21-d_tcm221-1045758.jpg"
+                alt="Adidas Miami Messi Jersey"
+              />
+            </div>
+            <div className="absolute flex flex-col left-5">
+              <span className="font-sans text-4xl font-bold uppercase text-white">
+                the future is soccer
+              </span>
+              <span className="text-white font-sans font-light">
+                Pre-order Lionel Messi’s new Inter Miami CF authentic jersey.{" "}
+                <br />
+                Available exclusively in the adidas app.
+              </span>
+              <button className="p-4 w-40 border-b-4 border-r-4 flex uppercase text-black text-sm bg-white mt-5">
+                shop now{" "}
+                <svg
+                  className="w-5 h-5 ml-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </div> */}
-      {/* <div className="w-full h-full">
-        <div className="relative">
-          <img
-            className="w-full h-74"
-            src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/promo-fw23-july-60off-small-en-mh-d_tcm221-1044761.jpg"
-          />
-          <div className="absolute top-16 ml-5">
-            <h1 className="font-sans text-4xl font-bold uppercase text-white">
-              summer sale
-            </h1>
-            <h2 className=" text-white font-sans font-light">
-              Stock up on warm weather essentials with code SAVINGS.
-            </h2>
-            <button className="border-b-4 border-r-4 flex uppercase text-black text-sm bg-white py-3.5 px-2.5 mt-5">
-              shop now{" "}
-              <svg
-                className="w-5 h-5 ml-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
+        <div className="flex box-border ">
+          <div className="flex box-border ">
+            <div className="flex flex-col">
+              <div className="relative">
+                <img
+                  className="w-full h-full"
+                  src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/hc184-fw23-bts-july-essentials-onsite-mh-lg-m-d_tcm221-1047519.jpg"
                 />
-              </svg>
-            </button>
+              </div>
+              <div className="absolute flex flex-col mt-1 left-5">
+                <span className="font-sans text-4xl font-bold uppercase text-white">
+                  summer sale
+                </span>
+                <span className=" text-white font-sans font-light">
+                  Stock up on warm weather essentials <br />
+                  with code SAVINGS.
+                </span>
+                <button className="p-4 w-40 border-b-4 border-r-4 flex uppercase text-black text-sm bg-white mt-5">
+                  shop now{" "}
+                  <svg
+                    className="w-5 h-5 ml-5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div> */}
+      </div>
+
       <div className="box-border mt-10">
-          <h1 className="text-4xl font-bold font-sans ml-5">
-            Still Interested?
-          </h1>
-          <div className="box-border mt-10">
-            <div className="flex justify-center gap-5">
-              <div className="box-border">
-                <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
-                  <div className="relative">
-                    <img
-                      className="w-full h-full"
-                      src="https://assets.adidas.com/images/w_600,f_auto,q_auto/a636e80d7eda4ede9f5caf0300a203c3_9366/3-Stripes_Shorts_Black_IB7426_01_laydown.jpg"
-                    />
-                    <div className="absolute top-64 ml-2 bg-white p-1">
-                      <span>$ 32</span>
-                    </div>
-                  </div>
-                  <div className=" font-sans">
-                    <Link href="/**">
-                      <p className=" font-light">3-Stripes Shorts</p>
-                      <p className=" font-extralight">Originals</p>
-                    </Link>
+        <h1 className="text-4xl font-bold font-sans ml-5">Still Interested?</h1>
+        <div className="box-border mt-10">
+          <div className="flex justify-center gap-5">
+            <div className="box-border">
+              <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                <div className="relative">
+                  <img
+                    className="w-full h-full"
+                    src="https://assets.adidas.com/images/w_600,f_auto,q_auto/a636e80d7eda4ede9f5caf0300a203c3_9366/3-Stripes_Shorts_Black_IB7426_01_laydown.jpg"
+                  />
+                  <div className="absolute top-64 ml-2 bg-white p-1">
+                    <span>$ 32</span>
                   </div>
                 </div>
-              </div>
-              <div className="box-border">
-                <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
-                  <div className="relative">
-                    <img
-                      className="w-full h-full"
-                      src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2839603e7fda434c8a62afc2010aa317_9366/Adicolor_3-Stripes_Shorts_Pink_II0720_01_laydown.jpg"
-                    />
-                    <div className="absolute top-64 ml-2 bg-white p-1">
-                      <span>$ 32</span>
-                    </div>
-                  </div>
-                  <div className=" font-sans">
-                    <Link href="/**">
-                      <p className=" font-light">Adicolor 3-Stripes Shorts</p>
-                      <p className=" font-extralight">Originals</p>
-                    </Link>
-                  </div>
+                <div className=" font-sans">
+                  <Link href="/**">
+                    <p className=" font-light">3-Stripes Shorts</p>
+                    <p className=" font-extralight">Originals</p>
+                  </Link>
                 </div>
               </div>
-              <div className="box-border">
-                <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
-                  <div className="relative">
-                    <img
-                      className="w-full h-full"
-                      src="https://assets.adidas.com/images/w_600,f_auto,q_auto/004848554d2d4e3c8d28afc300d0ccb1_9366/Pacer_3-Stripes_Knit_Shorts_Pink_HY1801_01_laydown.jpg"
-                    />
-                    <div className="absolute top-64 ml-2 bg-white p-1">
-                      <span>$ 25</span>
-                    </div>
-                  </div>
-                  <div className=" font-sans">
-                    <Link href="/**">
-                      <p className=" font-light">Pacer 3-Stripes Knit Shorts</p>
-                      <p className=" font-extralight">Perfomance</p>
-                    </Link>
+            </div>
+            <div className="box-border">
+              <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                <div className="relative">
+                  <img
+                    className="w-full h-full"
+                    src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2839603e7fda434c8a62afc2010aa317_9366/Adicolor_3-Stripes_Shorts_Pink_II0720_01_laydown.jpg"
+                  />
+                  <div className="absolute top-64 ml-2 bg-white p-1">
+                    <span>$ 32</span>
                   </div>
                 </div>
-              </div>
-              <div className="box-border">
-                <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
-                  <div className="relative">
-                    <img
-                      className="w-full h-full"
-                      src="https://assets.adidas.com/images/w_600,f_auto,q_auto/3b11eae2033647e0a7d6afcd002a2d1c_9366/Adicolor_Classics_3-Stripes_Short_Tank_Top_Green_IK6586_01_laydown.jpg"
-                    />
-                    <div className="absolute top-64 ml-2 bg-white p-1">
-                      <span>$ 35</span>
-                    </div>
-                  </div>
-                  <div className=" font-sans">
-                    <Link href="/**">
-                      <p className=" font-light">
-                        Adicolor Classics 3-Stripes Short Tank Top
-                      </p>
-                      <p className=" font-extralight">Originals</p>
-                    </Link>
-                  </div>
+                <div className=" font-sans">
+                  <Link href="/**">
+                    <p className=" font-light">Adicolor 3-Stripes Shorts</p>
+                    <p className=" font-extralight">Originals</p>
+                  </Link>
                 </div>
               </div>
-              <div className="box-border">
-                <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
-                  <div className="relative">
-                    <img
-                      className="w-full h-full"
-                      src="https://assets.adidas.com/images/w_600,f_auto,q_auto/42b741181e06485b9568e9a801b19644_9366/Adicolor_Essentials_French_Terry_Shorts_Green_IJ7801_01_laydown.jpg"
-                    />
-                    <div className="absolute top-64 ml-2 bg-white p-1">
-                      <span>$ 35</span>
-                    </div>
+            </div>
+            <div className="box-border">
+              <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                <div className="relative">
+                  <img
+                    className="w-full h-full"
+                    src="https://assets.adidas.com/images/w_600,f_auto,q_auto/004848554d2d4e3c8d28afc300d0ccb1_9366/Pacer_3-Stripes_Knit_Shorts_Pink_HY1801_01_laydown.jpg"
+                  />
+                  <div className="absolute top-64 ml-2 bg-white p-1">
+                    <span>$ 25</span>
                   </div>
-                  <div className=" font-sans">
-                    <Link href="/**">
-                      <p className=" font-light">
-                        Adicolor Essentials French Terry Shorts
-                      </p>
-                      <p className=" font-extralight">Originals</p>
-                    </Link>
+                </div>
+                <div className=" font-sans">
+                  <Link href="/**">
+                    <p className=" font-light">Pacer 3-Stripes Knit Shorts</p>
+                    <p className=" font-extralight">Perfomance</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="box-border">
+              <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                <div className="relative">
+                  <img
+                    className="w-full h-full"
+                    src="https://assets.adidas.com/images/w_600,f_auto,q_auto/3b11eae2033647e0a7d6afcd002a2d1c_9366/Adicolor_Classics_3-Stripes_Short_Tank_Top_Green_IK6586_01_laydown.jpg"
+                  />
+                  <div className="absolute top-64 ml-2 bg-white p-1">
+                    <span>$ 35</span>
                   </div>
+                </div>
+                <div className=" font-sans">
+                  <Link href="/**">
+                    <p className=" font-light">
+                      Adicolor Classics 3-Stripes Short Tank Top
+                    </p>
+                    <p className=" font-extralight">Originals</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="box-border">
+              <div className="box-border w-72 h-72 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                <div className="relative">
+                  <img
+                    className="w-full h-full"
+                    src="https://assets.adidas.com/images/w_600,f_auto,q_auto/42b741181e06485b9568e9a801b19644_9366/Adicolor_Essentials_French_Terry_Shorts_Green_IJ7801_01_laydown.jpg"
+                  />
+                  <div className="absolute top-64 ml-2 bg-white p-1">
+                    <span>$ 35</span>
+                  </div>
+                </div>
+                <div className=" font-sans">
+                  <Link href="/**">
+                    <p className=" font-light">
+                      Adicolor Essentials French Terry Shorts
+                    </p>
+                    <p className=" font-extralight">Originals</p>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
       <div className=" flex justify-evenly mt-24">
         <div className="box-border ml-4 mr-4 mt-5">
           <div className="relative bg-zinc-200 text-center">
@@ -579,88 +588,100 @@ export default function Home() {
       {renderView()}
 
       <div className="box-border mt-40 ml-5 mr-5">
-        
-        
         <div className="flex justify-center gap-5">
           <div className="box-border">
             <div className="box-border">
               <img
-              className="w-72 "
-              src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/enUS/Images/originals-fw23-t-toe-global-launch-dotcom-hp-teaser-carousel-d_tcm221-1036748.jpg"/>
+                className="w-72 "
+                src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/enUS/Images/originals-fw23-t-toe-global-launch-dotcom-hp-teaser-carousel-d_tcm221-1036748.jpg"
+              />
             </div>
-            
+
             <Link href="/**">
               <p className=" uppercase font-extrabold">always in style</p>
-              <p className=" font-light text-xs mt-1">Wear everywhere, every day.</p>
+              <p className=" font-light text-xs mt-1">
+                Wear everywhere, every day.
+              </p>
             </Link>
             <div className="mt-5">
-            <Link
-              href="/*"
-              className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
-            >
-              <span>shop now</span>
-            </Link>
+              <Link
+                href="/*"
+                className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
+              >
+                <span>shop now</span>
+              </Link>
             </div>
           </div>
 
           <div className="box-border">
             <div className="box-border">
               <img
-              className="w-72 "
-              src="https://brand.assets.adidas.com/image/upload/q_auto,f_auto:video/enUS/Images/Teaser-Card_Motion_1050px1400px_tcm221-1042955.jpg"/>
+                className="w-72 "
+                src="https://brand.assets.adidas.com/image/upload/q_auto,f_auto:video/enUS/Images/Teaser-Card_Motion_1050px1400px_tcm221-1042955.jpg"
+              />
             </div>
-            
+
             <Link href="/**">
-              <p className=" uppercase font-extrabold">ULTRABOOST 1.0 COLLEGE PACK</p>
-              <p className=" font-light text-xs">The College Pack is back! Featuring your <br/> favorite school’s official logo, colors, and details.</p>
+              <p className=" uppercase font-extrabold">
+                ULTRABOOST 1.0 COLLEGE PACK
+              </p>
+              <p className=" font-light text-xs">
+                The College Pack is back! Featuring your <br /> favorite
+                school’s official logo, colors, and details.
+              </p>
             </Link>
             <div className="mt-2">
-            <Link
-              href="/*"
-              className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
-            >
-              <span>shop now</span>
-            </Link>
+              <Link
+                href="/*"
+                className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
+              >
+                <span>shop now</span>
+              </Link>
             </div>
           </div>
           <div className="box-border">
             <div className="box-border">
               <img
-              className="w-72 "
-              src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/enUS/Images/sp129-ss23-wwc-crazy-fast-tcc_tcm221-1042954.jpg"/>
+                className="w-72 "
+                src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/enUS/Images/sp129-ss23-wwc-crazy-fast-tcc_tcm221-1042954.jpg"
+              />
             </div>
-            
+
             <Link href="/**">
               <p className=" uppercase font-extrabold">your world cup cleats</p>
               <p className=" font-light text-xs mt-1">Engineered for speed.</p>
             </Link>
             <div className="mt-5">
-            <Link
-              href="/*"
-              className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
-            >
-              <span>shop now</span>
-            </Link>
+              <Link
+                href="/*"
+                className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
+              >
+                <span>shop now</span>
+              </Link>
             </div>
           </div>
           <div className="box-border">
             <div className="box-border">
               <img
-              className="w-72 "
-              src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/enUS/Images/hc184-fw23-bts-july-essentials-onsite-glp-tcc-m_tcm221-1042943.png"/>
+                className="w-72 "
+                src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/enUS/Images/hc184-fw23-bts-july-essentials-onsite-glp-tcc-m_tcm221-1042943.png"
+              />
             </div>
-            
+
             <Link href="/**">
               <p className=" uppercase font-extrabold">BACK TO SCHOOL STYLES</p>
-              <p className=" font-light text-xs mt-1">Kick-start your fall wardrobe with tees, shorts and <br/> sneakers to mix and match.</p>
+              <p className=" font-light text-xs mt-1">
+                Kick-start your fall wardrobe with tees, shorts and <br />{" "}
+                sneakers to mix and match.
+              </p>
             </Link>
             <div className="mt-1">
-            <Link
-              href="/*"
-              className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
-            >
-              <span>shop now</span>
-            </Link>
+              <Link
+                href="/*"
+                className="uppercase font-bold text-base underline hover:bg-black hover:text-white"
+              >
+                <span>shop now</span>
+              </Link>
             </div>
           </div>
         </div>

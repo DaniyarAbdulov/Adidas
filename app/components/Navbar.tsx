@@ -3,19 +3,13 @@ import Link from "next/link";
 import Menu from "./Menu";
 import { useState, useEffect } from "react";
 interface Props {
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-
-const Navbar = ({setIsMenuOpen}: Props) => {
-  const [isSticky, setIsSticky] = useState(true);
-
+const Navbar = ({ setIsMenuOpen }: Props) => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-
-      const threshold = 100;
-      setIsSticky(offset <= threshold);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,32 +19,34 @@ const Navbar = ({setIsMenuOpen}: Props) => {
     };
   }, []);
   return (
-    <header className="w-full h-full">
-      <Menu setIsMenuOpen={setIsMenuOpen}/>
-      <div className="flex flex-row justify-center font-mono uppercase text-sm bg-black text-white border-b-4 border-b-slate-900 text-center w-full h-auto"></div>
-      <ul className="flex justify-end font-mono text-xs mt-2 gap-5">
-        <li>
-          <Link href="/1">help</Link>
-        </li>
-        <li>
-          <Link href="/1">orders and returns</Link>
-        </li>
-        <li>
-          <Link href="/1">join adiClub</Link>
-        </li>
-        <li>
-          <Link href="/1">
-            <button>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_the_United_States.png/640px-Flag_of_the_United_States.png"
-                alt="usa flag"
-                className="w-5 h-auto"
-              />
-            </button>
-          </Link>
-        </li>
-      </ul>
-      <div className="flex items-center justify-between mr-5 ml-5 mb-5">
+    <div className="flex flex-col box-border">
+      <div className="box-border">
+        <Menu setIsMenuOpen={setIsMenuOpen} />
+        <div className="flex justify-end box-border">
+          <ul className="flex font-mono text-xs mt-2 gap-5">
+            <li>
+              <Link href="/1">help</Link>
+            </li>
+            <li>
+              <Link href="/1">orders and returns</Link>
+            </li>
+            <li>
+              <Link href="/1">join adiClub</Link>
+            </li>
+            <li>
+              <Link href="/1">
+                <button>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_the_United_States.png/640px-Flag_of_the_United_States.png"
+                    alt="usa flag"
+                    className="w-5 h-auto"
+                  />
+                </button>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="flex items-center justify-between mr-5 ml-5 mb-5">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Adidas_isologo.svg/300px-Adidas_isologo.svg.png"
           width={60}
@@ -126,7 +122,8 @@ const Navbar = ({setIsMenuOpen}: Props) => {
           </div>
         </div>
       </div>
-    </header>
+      </div>
+    </div>
   );
 };
 
