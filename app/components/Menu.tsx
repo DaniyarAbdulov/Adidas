@@ -2,13 +2,12 @@
 import React, { useState } from "react";
 
 interface Props {
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Menu = ({setIsMenuOpen}: Props) => {
-
+const Menu = ({ setIsMenuOpen }: Props) => {
   const toggleMenu = () => {
-    setIsMenuOpen(prev => !prev);
+    setIsMenuOpen((prev) => !prev);
   };
 
   return (
@@ -26,7 +25,6 @@ const Menu = ({setIsMenuOpen}: Props) => {
           </div>
         </div>
       </button>
-      
     </div>
   );
 };

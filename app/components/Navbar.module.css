@@ -1,0 +1,7 @@
+.sticky {
+    position: sticky;
+    top: 0;
+    animation: stickyAnimation 0.5s forwards;
+    z-index: 1;
+  }
+  
