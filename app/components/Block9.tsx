@@ -6,7 +6,7 @@ const Block9 = () => {
         <div className=' flex justify-center'>
             <div className=' flex box-border'>
                 <div className='flex flex-row gap-5 mt-14 mb-10'>
-                <h1 className=' uppercase font-sans font-bold text-2xl'>
+                <h1 className=' uppercase font-sans font-bold text-xl'>
                 join our adiclub & get 15% off
                 </h1>
                 <button className="p-3 border-b-4 border-r-4 flex uppercase text-white text-sm bg-black">

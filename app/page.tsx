@@ -9,6 +9,9 @@ import Block7 from "./components/Block7";
 import Block8 from "./components/Block8";
 import Block9 from "./components/Block9";
 
+import Block10 from "./components/Block10";
+import Block11 from "./components/Block11";
+
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -21,6 +24,8 @@ export default function Home() {
       <Block7 />
       <Block8 />
       <Block9 />
+      <Block10/>
+      <Block11/>
     </div>
   );
 }

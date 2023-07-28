@@ -3,7 +3,7 @@ import React from "react";
 const Block8 = () => {
   return (
     <div className=" bg-amber-100 mt-20">
-        <div className="box-border mr-4 ml-4 ">
+        <div className="box-border mr-4 ml-4 mb-10 ">
       <div className="flex gap-24">
         <div className=" flexbox-border">
           <h1 className="font-sans font-bold text-2xl">

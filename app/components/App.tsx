@@ -14,12 +14,17 @@ const App = ({ children }: Props) => {
     setIsMenuOpen((prev) => !prev);
   }
   return (
-    <div className="relative ">
-       <Menu setIsMenuOpen={setIsMenuOpen} />
+    
+      <div className="relative ">
+       
+       <Menu setIsMenuOpen={setIsMenuOpen}  />
+      
       {isMenuOpen && (
+        
         <div className="z-10 absolute w-full h-full bg-black bg-opacity-50 flex items-start justify-center">
           <div className={classes.slide_down}>
             <div className=" bg-white w-full transition-transform ease-in-out duration-300 p-10">
+              
               <div className=" flex justify-end">
                 <button onClick={toggleMenu} className=" bg-white text-black">
                   <svg fill="currentColor" viewBox="0 0 16 16" height={30}>
@@ -115,6 +120,8 @@ const App = ({ children }: Props) => {
       <Navbar setIsMenuOpen={setIsMenuOpen} />
         {children}
     </div>
+  
+    
   );
 };
 
