@@ -33,7 +33,7 @@ const Block11 = () => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center  box-border mb-5">
+      <div className="flex justify-center  box-border">
         <div className=" text-white mt-10">
           <ul className="flex gap-10 text-sm font-sans">
             <li>

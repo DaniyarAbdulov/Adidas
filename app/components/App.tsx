@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 import classes from "./App.module.css";
-import Menu from "./Menu";
+import Menu from "./Navbar/Menu";
 interface Props {
   children: any;
 }

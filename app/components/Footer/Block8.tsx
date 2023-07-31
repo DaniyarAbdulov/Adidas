@@ -3,9 +3,9 @@ import React from "react";
 const Block8 = () => {
   return (
     <div className=" bg-amber-100 mt-20">
-        <div className="box-border mr-4 ml-4 mb-10 ">
+        <div className="box-border mr-4 ml-4">
       <div className="flex gap-24">
-        <div className=" flexbox-border">
+        <div className=" flexbox-border mb-20 mt-10">
           <h1 className="font-sans font-bold text-2xl">
             Stories, style, and
             <br /> sporting goods at adidas, since 1949
@@ -33,7 +33,7 @@ const Block8 = () => {
           </div>
         </div>
 
-        <div className="box-border ">
+        <div className="box-border mb-20 mt-10">
           <h1 className="font-sans font-bold text-2xl">
             Workout clothes, <br />
             for any sport

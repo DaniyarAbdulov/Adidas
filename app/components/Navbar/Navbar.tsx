@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Menu from "./Menu";
 import { useState, useEffect } from "react";
 import classes from "./Navbar.module.css";
 interface Props {
@@ -49,6 +48,11 @@ const Navbar = ({ setIsMenuOpen }: Props) => {
                 <p>back to school</p>
                 <p>sale</p>
                 <p>3 stripe life</p>
+                <p>
+                  <Link href="/adiFamily">
+                    adiFamily
+                  </Link>
+                </p>
               </ul>
               <div className="flex gap-5">
                 <div>
